@@ -16,7 +16,6 @@ public class RefineUnicode {
 
 
     public static void main(String[] args) {
-
         File file = new File("test.docx");
         FileInputStream fis = null;
         try {
@@ -43,7 +42,7 @@ public class RefineUnicode {
                     if(i+1 < runsLength){
                         XWPFRun nextRun = runs.get(i+1);
                         String nextText = nextRun.getText(0);
-                        String[] nonStartables = { "ා","ැ","ෑ","ි","ී","ු" ,"ෘ","ෙ",
+                        String[] nonStartables = { "ා","ැ","ෑ","ි","ී","ු" ,"ූ","ෘ","ෙ",
                                 "ේ","ෛ","ො","ෝ","ෞ","ෟ","ෲ","ෳ","්"};
                         for (String nonStartable: nonStartables ) {
                             if(nextText!= null && nextText.startsWith(nonStartable)){
